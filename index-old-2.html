@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahmad Saubani | Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    html, body {
+    overflow-x: hidden;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 30%;
+      background: #345e3e;
+      color: #fff;
+      padding: 2rem;
+    }
+
+    .sidebar img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 0.2rem;
+    }
+
+    .sidebar p {
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    .sidebar h4 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+      font-size: 0.9rem;
+    }
+
+    .sidebar ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .sidebar a {
+      color: #4ad991;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    /* .main {
+      width: 70%;
+      background: #f4f4f4;
+      padding: 2rem 3rem;
+    } */
+
+    .main {
+      width: 70%;
+      background: #f4f4f4;
+      padding: 2rem 3rem;
+      position: relative;
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .section h3 {
+      color: #009933;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #009933;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+
+    .section h3 i {
+      margin-right: 8px;
+      color: #009933;
+    }
+
+    .experience-grid,
+    .education-grid,
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk desktop */
+      gap: 20px;
+    }
+
+    .experience-entry,
+    .education-entry,
+    .project-entry {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .experience-entry strong,
+    .education-entry strong,
+    .project-entry strong {
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .experience-entry em,
+    .education-entry em,
+    .project-entry em {
+      display: block;
+      font-style: italic;
+      color: #555;
+      margin-bottom: 0.3rem;
+    }
+
+    .experience-entry ul,
+    .education-entry ul,
+    .project-entry ul {
+      margin-left: 1.2rem;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .skills .bar {
+      background: #ddd;
+      border-radius: 5px;
+      margin-bottom: 0.8rem;
+      height: 6px;
+      overflow: hidden;
+    }
+
+    .skills .bar span {
+      display: block;
+      height: 100%;
+      background: #009933;
+    }
+
+    .hobbies-icons {
+      display: flex;
+      gap: 15px;
+      font-size: 1.5rem;
+      color: #4ad991;
+      margin-top: 0.5rem;
+    }
+
+    .contact-category {
+      margin-bottom: 1rem;
+    }
+
+    .contact-category i {
+      margin-right: 8px;
+      width: 18px;
+      text-align: center;
+    }
+
+    .contact-category strong {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+
+    .contact-category ul {
+      list-style: none;
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .contact-category ul li {
+      margin-bottom: 0.3rem;
+    }
+
+    /* Media Query for Mobile */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar,
+      .main {
+        width: 100%;
+        padding: 1.2rem;
+      }
+
+      .experience-entry,
+      .education-entry,
+      .project-entry {
+        flex: 1 1 100%;
+        margin-bottom: 1rem; /* Adds space between the entries */
+      }
+
+      /* Remove grid layout for mobile */
+      .experience-grid,
+      .education-grid,
+      .projects-grid {
+        display: block; /* Tidak pakai grid untuk mobile */
+      }
+    }
+
+     /* Copyright styling */
+     .copyright {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+    <div class="container">
+    <div class="sidebar">
+        <img src="assets/img/ahmadsaubani.png" alt="Profile Picture" />
+        <h2>Ahmad Saubani</h2>
+        <p>Backend Developer | https://ahmadsaubani.github.io</p>
+
+        <h4>Profile</h4>
+        <p>My experience is rest api development and analyzing database. Always positive and learning more knowledge is my life.
+        "Don't stress it, just keep it simple, it's bad for your health".</p>
+
+        <h4>Contact</h4>
+        <div class="contact-category">
+            <strong><i class="fas fa-envelope"></i>Email</strong>
+            <ul>
+            <li>banz.cozy@gmail.com</li>
+            <li>banzcozyy@gmail.com</li>
+            </ul>
+        </div>
+        <div class="contact-category">
+            <strong><i class="fas fa-phone"></i>Phone</strong>
+            <ul>
+            <li>+62 821-9999-3910</li>
+            </ul>
+        </div>
+        <div class="contact-category">
+            <strong><i class="fas fa-map-marker-alt"></i>Location</strong>
+            <ul>
+            <li>Tangerang, Indonesia</li>
+            </ul>
+        </div>
+        <div class="contact-category">
+            <strong><i class="fab fa-linkedin"></i>LinkedIn</strong>
+            <ul>
+            <li><a href="https://www.linkedin.com/in/ahmadsaubani/">linkedin.com/in/ahmadsaubani</a></li>
+            </ul>
+        </div>
+        <div class="contact-category">
+            <strong><i class="fab fa-gitlab"></i>GitLab</strong>
+            <ul>
+            <li><a href="https://gitlab.com/ahmadsaubani">gitlab.com/ahmadsaubani</a></li>
+            </ul>
+        </div>
+        <div class="contact-category">
+          <strong><i class="fab fa-github"></i>GitHub</strong>
+          <ul>
+          <li><a href="https://github.com/ahmadsaubani">github.com/ahmadsaubani</a></li>
+          </ul>
+      </div>
+
+        <h4>Languages</h4>
+        <ul>
+            <li>Bahasa Indonesia</li>
+            <li>English</li>
+        </ul>
+
+        <h4>Hobbies</h4>
+        <div class="hobbies-icons">
+            <i class="fas fa-code" title="Coding"></i>
+            <i class="fas fa-book-reader" title="Reading"></i>
+            <i class="fas fa-gamepad" title="Gaming"></i>
+            <i class="fas fa-hiking" title="Hiking"></i>
+        </div>
+
+        <h4>Skills</h4>
+        <div class="skills">
+            <p>PHP</p>
+            <div class="bar"><span style="width: 85%"></span></div>
+
+            <p>Unix System</p>
+            <div class="bar"><span style="width: 84%"></span></div>
+
+            <p>Rest Api</p>
+            <div class="bar"><span style="width: 83%"></span></div>
+
+            <p>DBMS</p>
+            <div class="bar"><span style="width: 80%"></span></div>
+
+            <p>GIT</p>
+            <div class="bar"><span style="width: 80%"></span></div>
+
+            <p>Docker</p>
+            <div class="bar"><span style="width: 15%"></span></div>
+
+            <p>Microservices</p>
+            <div class="bar"><span style="width: 50%"></span></div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="section">
+            <h3><i class="fas fa-briefcase"></i>Experiences</h3>
+                <div class="experience-grid">
+                    <div class="experience-entry">
+                    <strong>PT. Ethis Fintek Indonesia - Financial Service</strong>
+                    <em>Head of IT (Feb 2023 - Present)</em>
+                        <ul>
+                            <li>Lead the strategic direction of the IT department aligned with company goals</li>
+                            <li>Supervise cross-functional teams and oversee project delivery and system architecture</li>
+                            <li>Coordinate with C-level executives to drive technology initiatives and innovations</li>
+                            <li>Ensure IT infrastructure scalability, security, and compliance with industry standards</li>
+                        </ul>
+                    <br>
+                    <em>Backend Developer (Feb 2021 - Present)</em>
+                    <ul>
+                        <li>Creating rest api for app platform crowdfunding using laravel 7.2 as a Backend.</li>
+                        <li>Maintenance rest api according to OJK requirements.</li>
+                        <li>Build internal server with raspberry pi 4 for running pefindo app.</li>
+                        <li>Creating CI/CD deploy to staging server (BE & FE using react js).</li>
+                        <li>Setup staging server and production server using ali cloud with webserver nginx.</li>
+                        <li>Using Concept Micro services and implement Kong Gateway.</li>
+                        <li>Integrate rest api with multiple third party.</li>
+                        <li>RnD for the next feature in our platform.</li>
+                        <li>and many more..</li>
+                    </ul>
+                </div>
+
+                <div class="experience-entry">
+                    <strong>PT. 62Teknologi - Software House</strong>
+                    <em>Backend Developer (Dec 2019 - Feb 2021)</em>
+                    <ul>
+                        <li>Creating rest api for internal apps with Lumen 5.8.</li>
+                        <li>Creating rest api for panasonic app hotel with Lumen 5.8.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-entry">
+                    <strong>PT. TribeCloud Solutions Indonesia - Software House</strong>
+                    <em>Backend Developer (Apr 2019 - Nov 2019)</em>
+                    <ul>
+                        <li>Create Rest-api for https://juulappid.com with laravel 5.8.</li>
+                        <li>Create Rest-api for support ticket in https://lazada.thetribecloud.com</li>
+                    </ul>
+                </div>
+
+                <div class="experience-entry">
+                    <strong>PT. Indonesia Karsa Mulia - Blockchain</strong>
+                    <em>Backend Developer (Dec 2018 - Apr 2019)</em>
+                    <ul>
+                        <li>Create Ecosystem platform for blockchain with laravel 5.7.</li>
+                        <li>Create Rest-api Ecosystem platform for blockchain with lumen 5.7.</li>
+                    </ul>
+                </div>
+
+                <div class="experience-entry">
+                    <strong>PT. Touch Technology Indonesia - SaaS</strong>
+                    <em>Backend PHP Developer Symfony 4 (Sept 2018 - Dec 2018)</em>
+                    <ul>
+                        <li>Create Rest-api for online market place like E-bay, Woocommerce, Wish etc.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+                <h3><i class="fas fa-graduation-cap"></i>Educations</h3>
+            <div class="education-grid">
+                <div class="education-entry">
+                    <strong>STMIK Nusamandiri Cengkareng - Computer Science</strong>
+                    <em>2015 - 2019</em>
+                    <ul>
+                        <li>IPK:  3.51</li>
+                    </ul>
+                </div>
+
+                <div class="education-entry">
+                <strong>SMA Negeri 95 Jakarta Barat - IPS</strong>
+                <em>2011 - 2014</em>
+                </div>
+                <div class="education-entry">
+                    <strong>MTs Dail Khairaat</strong>
+                    <em>2008 - 2011</em>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="section">
+            <h3><i class="fas fa-project-diagram"></i>Skills</h3>
+            <div class="projects-grid">
+                <div class="project-entry">
+                <strong>PHP Frameworks</strong>
+                <ul>
+                    <li>Code Igniter</li>
+                    <li>Laravel</li>
+                    <li>Symfony</li>
+                </ul>
+                </div>
+
+                <div class="project-entry">
+                <strong>Database</strong>
+                <ul>
+                    <li>MySQL</li>
+                    <li>PostgreSQL</li>
+                    <li>SQLite</li>
+                </ul>
+                </div>
+
+                <div class="project-entry">
+                    <strong>Others</strong>
+                    <ul>
+                        <li>Git</li>
+                        <li>MicroServices</li>
+                        <li>Rest Api</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3><i class="fas fa-project-diagram"></i>Interested Tech</h3>
+            <div class="projects-grid">
+
+                <div class="project-entry">
+                    <strong>Interested Tech</strong>
+                    <ul>
+                        <li>Message Broker (Rabbit MQ, Kafka etc)</li>
+                        <li>Golang</li>
+                        <li>K8s</li>
+                        <li>Docker</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p><a href="https://ahmadsaubani.github.io/">&copy; 2025 Ahmad Saubani</a></p>
+        </div>
+
+    </div>
+</div>
+
+</body>
+
+</html>
